@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #fafafa;
+  --secondary-color: #000;
+}
+
+body {
+  font-family: 'Oxygen';
+}
+
+.hamburger-menu {
+  height: 64px;
+  width: 64px;
+  top: 0;
+  right: 0;
+  margin: 3rem;
+  position: absolute;
+  background-color: black;
+  border-radius: 50%;
+  cursor: none;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
+}
+
+.hamburger-menu .fries-wrapper {
+  transform: translate(20px, 22px);
+}
+
+.hamburger-menu .fries {
+  background-color: white;
+  height: 2px;
+  width: 24px;
+  margin: 6px 0;
+}
+
+.hamburger-menu:hover {
+  background-color: white;
+}
+
+.hamburger-menu:hover .fries {
+  background-color: black;
+}
+
+.hero h1 {
+  font-size: 64px;
+}
