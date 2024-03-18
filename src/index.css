@@ -8,59 +8,49 @@
 body {
   font-family: 'Oxygen';
   overflow-x: hidden;
-}
-
-main {
-  display: flex;
-  width: 200%;
-}
-
-main .content,
-main .side-menu {
   width: 100%;
 }
 
 .side-menu {
+  top: 0;
+  left: 100%;
+  position: fixed;
   background-color: black;
   color: white;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
 }
 
 .side-menu .menu {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
 }
 
-.hamburger-menu {
+.menu-icon,
+.close-icon {
   position: fixed;
   top: 0;
   right: 0;
   margin: 3rem;
+  color: black;
   font-size: 32px;
   cursor: pointer;
 }
 
-.menu-icon {
-  color: black;
-}
-
 .close-icon {
-  color: white;
+  font-size: 36px;
+  z-index: 1001;
   display: none;
+  color: white;
 }
 
 section {
   position: relative;
-  padding: 3rem;
-  min-height: 100vh;
-}
-
-section .container {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  padding: 8rem 3rem;
 }
 
 .btn {
@@ -94,10 +84,26 @@ section .container {
 
 @media (max-width:768px) {
   section {
-    padding: 1.5rem;
+    padding: 4rem 1.5rem;
   }
 
-  .hamburger-menu {
+  .menu-icon,
+  .close-icon {
     margin: 1.5rem;
+  }
+
+  .hero {
+    width: calc(100% - 1.5rem);
+  }
+
+  .hero h1 {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero p,
+  .hero .btn {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
