@@ -12,6 +12,9 @@
 
 body {
   font-family: 'Oxygen';
+  max-width: 1600px;
+  margin: auto;
+  padding-inline: 1.5rem;
 }
 
 .hamburger-menu {
@@ -20,11 +23,10 @@ body {
   top: 0;
   right: 0;
   margin: 3rem;
-  position: absolute;
+  position: fixed;
   background-color: black;
   border-radius: 50%;
-  cursor: none;
-  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .hamburger-menu .fries-wrapper {
@@ -38,14 +40,67 @@ body {
   margin: 6px 0;
 }
 
-.hamburger-menu:hover {
-  background-color: white;
+.hamburger-menu:hover .menu-items {
+  transform: scaleY(1);
 }
 
-.hamburger-menu:hover .fries {
+.menu-items {
+  width: 72px;
+  top: 0;
+  right: 0;
+  margin: 120px calc(3rem - 4px);
+  padding: 1rem 1.2rem;
+  position: fixed;
+  border-radius: 2.5rem;
+  font-size: 36px;
+  padding: auto;
   background-color: black;
+  transform: scaleY(0);
+  transition: 0.25s all;
+  transform-origin: top;
+}
+
+.menu-items a {
+  color: white;
+  line-height: 52px;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  font-weight: bold;
+}
+
+.section-wrapper {
+  min-height: 100vh;
+  padding: 3rem;
+  position: relative;
+}
+
+section {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero {
+  max-width: 1100px;
 }
 
 .hero h1 {
   font-size: 64px;
+  margin-bottom: 2rem;
+}
+
+.hero p {
+  opacity: 50%;
+  font-size: 28px;
+  margin-bottom: 3rem;
+}
+
+.hero .btn {
+  font-size: 20px;
 }
