@@ -5,89 +5,75 @@
   scroll-behavior: smooth;
 }
 
-:root {
-  --primary-color: #fafafa;
-  --secondary-color: #000;
-}
-
 body {
   font-family: 'Oxygen';
-  max-width: 1600px;
-  margin: auto;
-  padding-inline: 1.5rem;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  width: 200%;
+}
+
+main .content,
+main .side-menu {
+  width: 100%;
+}
+
+.side-menu {
+  background-color: black;
+  color: white;
+}
+
+.side-menu .menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
 }
 
 .hamburger-menu {
-  height: 64px;
-  width: 64px;
+  position: fixed;
   top: 0;
   right: 0;
   margin: 3rem;
-  position: fixed;
-  background-color: black;
-  border-radius: 50%;
+  font-size: 32px;
   cursor: pointer;
 }
 
-.hamburger-menu .fries-wrapper {
-  transform: translate(20px, 22px);
+.menu-icon {
+  color: black;
 }
 
-.hamburger-menu .fries {
-  background-color: white;
-  height: 2px;
-  width: 24px;
-  margin: 6px 0;
-}
-
-.hamburger-menu:hover .menu-items {
-  transform: scaleY(1);
-}
-
-.menu-items {
-  width: 72px;
-  top: 0;
-  right: 0;
-  margin: 120px calc(3rem - 4px);
-  padding: 1rem 1.2rem;
-  position: fixed;
-  border-radius: 2.5rem;
-  font-size: 36px;
-  padding: auto;
-  background-color: black;
-  transform: scaleY(0);
-  transition: 0.25s all;
-  transform-origin: top;
-}
-
-.menu-items a {
+.close-icon {
   color: white;
-  line-height: 52px;
+  display: none;
+}
+
+section {
+  position: relative;
+  padding: 3rem;
+  min-height: 100vh;
+}
+
+section .container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .btn {
   text-decoration: none;
   color: white;
   background-color: black;
-  border-radius: 2rem;
   padding: 1rem 2rem;
+  border-radius: 2rem;
   font-weight: bold;
 }
 
-.section-wrapper {
-  min-height: 100vh;
-  padding: 3rem;
-  position: relative;
-}
-
-section {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .hero {
-  max-width: 1100px;
+  width: 75%;
 }
 
 .hero h1 {
@@ -96,11 +82,22 @@ section {
 }
 
 .hero p {
-  opacity: 50%;
-  font-size: 28px;
-  margin-bottom: 3rem;
+  color: #848484;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 2.5rem;
 }
 
 .hero .btn {
   font-size: 20px;
+}
+
+@media (max-width:768px) {
+  section {
+    padding: 1.5rem;
+  }
+
+  .hamburger-menu {
+    margin: 1.5rem;
+  }
 }
