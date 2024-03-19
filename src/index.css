@@ -158,6 +158,15 @@ section {
     padding-bottom: 6rem;
   }
 
+  .hero-grid {
+    flex-direction: column-reverse;
+  }
+
+  .hero img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
   .hero h1 {
     font-size: 48px;
     line-height: 48px;
