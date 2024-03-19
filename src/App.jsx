@@ -29,8 +29,8 @@ const App = () => {
           I am CS & IT student and enthusiast, who loves to build innovative projects 💡. I believe in self-learning and have fond of research and development in field of CS and IT. I enjoy designing UI/UX as well as business logic, algorithms and data related stuff 🚀. Feel free to refer to my github projects.
           </p>
           <ul>
-            <li><a href='#' style={{color: '#1976d2'}}><FontAwesomeIcon icon={faLinkedin} /></a></li>
-            <li><a href='#' style={{color: 'black'}}><FontAwesomeIcon icon={faGithub} /></a></li>
+            <li><a href='https://in.linkedin.com/in/jainam-doshi-24063a2a0' style={{color: '#1976d2'}}><FontAwesomeIcon icon={faLinkedin} /></a></li>
+            <li><a href='https://github.com/jpdoshi' style={{color: 'black'}}><FontAwesomeIcon icon={faGithub} /></a></li>
             <li><a href='https://www.instagram.com/_jpdoshi/' style={{color: '#e91e63'}}><FontAwesomeIcon icon={faInstagram} /></a></li>
           </ul>
         </div>
