@@ -93,10 +93,19 @@ section {
   transform: translateY(-50%);
 }
 
+.hero {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
 .hero h1 {
   margin: 3rem 0;
   font-size: calc(100vw/10);
   line-height: calc(100vw/10);
+}
+
+.hero p {
+  font-size: 28px;
 }
 
 .outer-links {
@@ -112,6 +121,19 @@ section {
 }
 
 @media (max-width:768px) {
+  .hero {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 22px;
+  }
+
   section {
     padding: 1.5rem;
   }
