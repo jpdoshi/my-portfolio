@@ -30,6 +30,18 @@ body {
   display: none;
 }
 
+.side-menu ul {
+  list-style-type: none;
+}
+
+.side-menu ul li a {
+  color: white;
+  text-decoration: none;
+  line-height: 5rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
 .menu-icon,
 .close-icon {
   position: fixed;
@@ -50,7 +62,14 @@ body {
 
 section {
   position: relative;
-  padding: 8rem 3rem;
+  padding: 3rem;
+  min-height: 100vh;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .btn {
@@ -68,7 +87,7 @@ section {
 
 .hero h1 {
   font-size: 64px;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .hero p {
@@ -79,12 +98,25 @@ section {
 }
 
 .hero .btn {
-  font-size: 20px;
+  font-size: 24px;
+}
+
+.hero ul {
+  list-style-type: none;
+  font-size: 32px;
+}
+
+.hero ul li {
+  display: inline-block;
+}
+
+.hero ul li a {
+  margin-inline: 12px;
 }
 
 @media (max-width:768px) {
   section {
-    padding: 4rem 1.5rem;
+    padding: 1.5rem;
   }
 
   .menu-icon,
@@ -93,11 +125,11 @@ section {
   }
 
   .hero {
-    width: calc(100% - 1.5rem);
+    width: 100%;
   }
 
   .hero h1 {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 1.5rem;
   }
 
