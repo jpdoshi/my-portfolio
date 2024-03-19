@@ -6,7 +6,7 @@
 }
 
 :root {
-  --primary-light: #fff8e1;
+  --primary-light: #fafafa;
   --primary-dark: #212121;
 }
 
@@ -25,10 +25,32 @@ body {
   max-width: 100%;
   color: var(--primary-dark);
   background-color: var(--primary-light);
+  max-width: 1500px;
+  margin: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: GeneralSansLight;
+}
+
+.btn {
+  display: block;
+  max-width: fit-content;
+  font-size: 20px;
+  padding: 12px 20px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  box-shadow: 6px 6px 0 black;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: translate(6px, 6px);
+  box-shadow: 0px 0px 0 black;
 }
 
 .side-menu {
@@ -57,8 +79,8 @@ h1, h2, h3, h4, h5, h6 {
 .side-menu ul li a {
   color: var(--primary-dark);
   text-decoration: none;
-  font-size: calc(100vh/10);
-  line-height: calc(100vh/10);
+  font-size: calc(100vh/15);
+  line-height: calc(100vh/15);
 }
 
 .menu-icon,
@@ -67,9 +89,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   right: 0;
   margin: 3rem;
-  padding: 12px;
-  background-color: var(--primary-dark);
-  color: var(--primary-light);
+  color: var(--primary-dark);
   font-size: 32px;
   cursor: pointer;
 }
@@ -78,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 38px;
   z-index: 1000;
   display: none;
-  padding: 8px 12px;
+  transform: translateX(-1rem);
 }
 
 section {
@@ -87,25 +107,33 @@ section {
   min-height: 100vh;
 }
 
-.center {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .hero {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: calc(100vh/5);
+  padding-bottom: calc(100vh/5);
 }
 
 .hero h1 {
-  margin: 3rem 0;
-  font-size: calc(100vw/10);
-  line-height: calc(100vw/10);
+  margin-bottom: 2rem;
+  font-size: 74px;
+  line-height: 74px;
 }
 
 .hero p {
-  font-size: 28px;
+  font-size: 20px;
+  line-height: 32px;
+  margin-right: 12px;
+  margin-bottom: 1rem;
+}
+
+.hero img {
+  width: 33vw;
+  margin-inline: 1rem;
+  max-width: 800px;
+}
+
+.hero-grid {
+  display: flex;
+  align-items: center;
 }
 
 .outer-links {
@@ -121,6 +149,10 @@ section {
 }
 
 @media (max-width:768px) {
+  .close-icon {
+    transform: none;
+  }
+
   .hero {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -128,19 +160,15 @@ section {
 
   .hero h1 {
     font-size: 48px;
+    line-height: 48px;
   }
 
   .hero p {
-    font-size: 22px;
+    margin-right: 0px;
   }
 
   section {
     padding: 1.5rem;
-  }
-
-  .side-menu ul li a {
-    font-size: calc(100vh/20);
-    line-height: calc(100vh/20);
   }
 
   .menu-icon,

@@ -1,5 +1,5 @@
 import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faBarsStaggered, faClose, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faBarsStaggered, faClose, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import $ from 'jquery'
 
@@ -22,15 +22,23 @@ const App = () => {
   return (
     <main>
     <div className="content">
-      <section className='hero'>
-        <h1>Hi, I'm <span>Jainam.</span></h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam debitis exercitationem accusamus soluta, voluptatem explicabo nisi rerum in at architecto iusto repellendus eaque dolor dignissimos consectetur reiciendis odio quam dolores. Ab dolor deserunt, quas earum corporis vel ratione, nostrum incidunt consequuntur enim excepturi inventore placeat accusantium eius dolore veritatis alias!</p>
+      <section className='hero' id='home'>
+        <div className='hero-grid'>
+          <div>
+            <h1>Hi, I'm <span>Jainam.</span></h1>
+            <p>
+              I am CS & IT student and enthusiast, who loves to build innovative projects. I believe in self-learning and have fond of research and development in field of CS and IT. I enjoy designing UI/UX as well as business logic, algorithms and data related stuff.
+            </p>
+            <a href='#projects' className='btn'>Explore Projects <FontAwesomeIcon icon={faArrowRight} /></a>
+          </div>
+          <img src='hero.png'/>
+        </div>
       </section>
     </div>
     <div className="side-menu">
       <div className="menu">
         <ul>
-          <li><a href='#hero'>HOME</a></li>
+          <li><a href='#home'>HOME</a></li>
           <li><a href='#projects'>PROJECTS</a></li>
           <li><a href='#about'>ABOUT</a></li>
           <li><a href='#contact'>CONTACT</a></li>
