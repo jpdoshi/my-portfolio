@@ -9,7 +9,7 @@ const App = () => {
     $('.menu-icon').fadeOut(250);
     $('.close-icon').fadeIn(500);
     $('.side-menu').animate({left: '0%'}, 250);
-    $('.menu').delay(300).fadeIn(400);
+    $('.menu').delay(250).fadeIn(500);
   }
 
   let closeMenu = () => {
@@ -25,13 +25,13 @@ const App = () => {
       <section className='hero' id='home'>
         <div className='hero-grid'>
           <div>
-            <h1>Hi, I'm <span>Jainam.</span></h1>
+            <h1>Hi, I'm <span>Jainam</span><div id='dot'></div></h1>
             <p>
               I am CS & IT student and enthusiast, who loves to build innovative projects. I believe in self-learning and have fond of research and development in field of CS and IT. I enjoy designing UI/UX as well as business logic, algorithms and data related stuff.
             </p>
             <a href='#projects' className='btn'>Explore Projects <FontAwesomeIcon icon={faArrowRight} /></a>
           </div>
-          <img src='hero.png'/>
+          <img src='hero.gif'/>
         </div>
       </section>
     </div>
