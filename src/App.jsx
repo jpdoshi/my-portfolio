@@ -1,37 +1,49 @@
 import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faArrowRight, faBarsStaggered, faClose, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import $ from 'jquery'
 
 const App = () => {
   let openMenu = () => {
     $('body').css('overflow-y', 'hidden');
-    $('.menu-icon').fadeOut(250);
-    $('.close-icon').fadeIn(500);
     $('.side-menu').animate({left: '0%'}, 250);
     $('.menu').delay(250).fadeIn(500);
+
+    $('.fries').eq(1).css({'opacity': '0', 'transform': 'translateX(1rem)'});
+    $('.fries').eq(0).css({'transform': 'translateY(9px) rotate(45deg)'});
+    $('.fries').eq(2).css({'transform': 'translateY(-9px) rotate(-45deg)'});
   }
 
   let closeMenu = () => {
     $('body').css('overflow-y', 'auto');
-    $('.menu-icon').fadeIn(500);
-    $('.close-icon').fadeOut(250);
     $('.side-menu').animate({left: '100%'}, 250);
     $('.menu').fadeOut(250);
+
+    $('.fries').eq(1).css({'opacity': '1', 'transform': 'none'});
+    $('.fries').eq(0).css({'transform': 'none'});
+    $('.fries').eq(2).css({'transform': 'none'});
+  }
+
+  let handleMenu = () => {
+    if ($('.side-menu').css('left') == "0px") {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   }
   return (
     <main>
     <div className="content">
       <section className='hero' id='home'>
         <div className='hero-grid'>
-          <div>
-            <h1>Hi, I'm <span>Jainam</span><div id='dot'></div></h1>
+          <div className='hero-content'>
+            <h1>Hi, I'm <span id='label'>Jainam.</span></h1>
             <p>
               I am CS & IT student and enthusiast, who loves to build innovative projects. I believe in self-learning and have fond of research and development in field of CS and IT. I enjoy designing UI/UX as well as business logic, algorithms and data related stuff.
             </p>
-            <a href='#projects' className='btn'>Explore Projects <FontAwesomeIcon icon={faArrowRight} /></a>
+            <a href='#projects' className='btn'>Explore Projects<FontAwesomeIcon style={{marginLeft: '8px'}} icon={faArrowRight} /></a>
           </div>
-          <img src='hero.gif'/>
+          <img src='radiohalo.gif'/>
         </div>
       </section>
     </div>
@@ -51,8 +63,12 @@ const App = () => {
           </ul>
       </div>
     </div>
-    <FontAwesomeIcon icon={faClose} className='close-icon' onClick={() => closeMenu()} />
-    <FontAwesomeIcon icon={faBarsStaggered} className='menu-icon' onClick={() => openMenu()} />
+    <div className='nav-icon'>jpdoshi.</div>
+    <div className='menu-icon' onClick={() => handleMenu()}>
+      <div className='fries'></div>
+      <div className='fries'></div>
+      <div className='fries'></div>
+    </div>
     </main>
   )
 }
