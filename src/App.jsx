@@ -2,6 +2,7 @@ import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-
 import { faArrowRight, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import $ from 'jquery'
+import Typewriter from 'typewriter-effect';
 
 const App = () => {
   let openMenu = () => {
@@ -36,14 +37,27 @@ const App = () => {
     <div className="content">
       <section className='hero' id='home'>
         <div className='hero-grid'>
-          <div className='hero-content'>
-            <h1>Hi, I'm <span id='label'>Jainam.</span></h1>
-            <p>
-              I am CS & IT student and enthusiast, who loves to build innovative projects. I believe in self-learning and have fond of research and development in field of CS and IT. I enjoy designing UI/UX as well as business logic, algorithms and data related stuff.
-            </p>
+          <div>
+            <img src='hero.gif'/>
+          </div>
+          <div>
+            <h1>Hey,<br/> I'm <Typewriter component={'span'}
+              onInit={(typewriter) => {
+                setInterval(() => {
+                  typewriter.typeString("Jainam.")
+                    .pauseFor(800)
+                    .deleteAll()
+                    .typeString("Tech Enthusiast.")
+                    .pauseFor(800)
+                    .deleteAll()
+                    .typeString("From India.")
+                    .pauseFor(800)
+                    .deleteAll()
+                    .start();
+                }, 200);
+              }}/></h1>
             <a href='#projects' className='btn'>Explore Projects<FontAwesomeIcon style={{marginLeft: '8px'}} icon={faArrowRight} /></a>
           </div>
-          <img src='radiohalo.gif'/>
         </div>
       </section>
     </div>
@@ -63,7 +77,7 @@ const App = () => {
           </ul>
       </div>
     </div>
-    <div className='nav-icon'>jpdoshi.</div>
+    <div className='nav-icon'><a href='/'>jpdoshi.</a></div>
     <div className='menu-icon' onClick={() => handleMenu()}>
       <div className='fries'></div>
       <div className='fries'></div>
