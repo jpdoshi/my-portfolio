@@ -81,7 +81,7 @@ body {
   color: var(--black);
   text-decoration: none;
   font-size: calc(100vh/15);
-  line-height: calc(100vh/15 + 8px);
+  line-height: calc(100vh/15 + 4px);
   z-index: 1;
   transition: 0.25s ease;
   font-weight: lighter;
@@ -117,10 +117,6 @@ body {
 .menu .outer-links li {
   display: inline-block;
   padding-inline: 5px;
-}
-
-.menu .outer-links svg {
-  font-size: 90%;
 }
 
 .nav-icon,

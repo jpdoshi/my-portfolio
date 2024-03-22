@@ -7,8 +7,8 @@ import { ReactTyped } from 'react-typed'
 const App = () => {
   let openMenu = () => {
     $('body').css('overflow-y', 'hidden');
-    $('.side-menu').animate({ left: '0%' }, 250);
-    $('.menu').delay(250).fadeIn(500);
+    $('.side-menu').animate({ left: '0%' }, 400);
+    $('.menu').delay(400).fadeIn(400);
 
     $('.fries').eq(1).css({ 'opacity': '0', 'transform': 'translateX(1rem)' });
     $('.fries').eq(0).css({ 'transform': 'translateY(9px) rotate(45deg)' });
@@ -17,8 +17,8 @@ const App = () => {
 
   let closeMenu = () => {
     $('body').css('overflow-y', 'auto');
-    $('.side-menu').animate({ left: '100%' }, 250);
-    $('.menu').fadeOut(250);
+    $('.side-menu').animate({ left: '100%' }, 400);
+    $('.menu').fadeOut(400);
 
     $('.fries').eq(1).css({ 'opacity': '1', 'transform': 'none' });
     $('.fries').eq(0).css({ 'transform': 'none' });
@@ -49,7 +49,7 @@ const App = () => {
                     "From India."
                   ]}
                   typeSpeed={80}
-                  backSpeed={30}
+                  backSpeed={40}
                   showCursor={false}
                   loop
                 /> 
@@ -62,10 +62,10 @@ const App = () => {
       <div className="side-menu">
         <div className="menu">
           <ul>
-            <li><a href='#home'>Home</a></li>
-            <li><a href='#projects'>Projects</a></li>
-            <li><a href='#about'>About</a></li>
-            <li><a href='#contact'>Contact</a></li>
+            <li><a href='#home'>HOME</a></li>
+            <li><a href='#projects'>PROJECTS</a></li>
+            <li><a href='#about'>ABOUT</a></li>
+            <li><a href='#contact'>CONTACT</a></li>
           </ul>
           <ul className='outer-links'>
             <li><a href='https://in.linkedin.com/in/jainam-doshi-24063a2a0'><FontAwesomeIcon icon={faLinkedin} /></a></li>
