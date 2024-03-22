@@ -8,7 +8,7 @@ const App = () => {
   let openMenu = () => {
     $('body').css('overflow-y', 'hidden');
     $('.side-menu').animate({ left: '0%' }, 250);
-    $('.menu').delay(250).fadeIn(500);
+    $('.menu').delay(250).fadeIn(250);
 
     $('.fries').eq(1).css({ 'opacity': '0', 'transform': 'translateX(1rem)' });
     $('.fries').eq(0).css({ 'transform': 'translateY(9px) rotate(45deg)' });
