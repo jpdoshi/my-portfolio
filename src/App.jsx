@@ -8,7 +8,7 @@ const App = () => {
   let openMenu = () => {
     $('body').css('overflow-y', 'hidden');
     $('.side-menu').animate({ left: '0%' }, 250);
-    $('.menu').delay(250).fadeIn(250);
+    $('.menu').delay(250).fadeIn(500);
 
     $('.fries').eq(1).css({ 'opacity': '0', 'transform': 'translateX(1rem)' });
     $('.fries').eq(0).css({ 'transform': 'translateY(9px) rotate(45deg)' });
@@ -48,8 +48,9 @@ const App = () => {
                     "Tech Enthusiast.",
                     "From India."
                   ]}
-                  typeSpeed={60}
-                  backSpeed={20}
+                  typeSpeed={80}
+                  backSpeed={30}
+                  showCursor={false}
                   loop
                 /> 
               </h1>
