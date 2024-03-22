@@ -81,7 +81,7 @@ body {
   color: var(--black);
   text-decoration: none;
   font-size: calc(100vh/15);
-  line-height: calc(100vh/15);
+  line-height: calc(100vh/15 + 10px);
   z-index: 1;
   transition: 0.25s ease;
   position: relative;
@@ -115,7 +115,7 @@ body {
 
 .menu .outer-links li {
   display: inline-block;
-  padding-inline: 5px;
+  padding-inline: 6px;
 }
 
 .nav-icon,

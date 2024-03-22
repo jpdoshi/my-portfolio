@@ -2,7 +2,7 @@ import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-
 import { faArrowRight, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import $ from 'jquery'
-import Typewriter from 'typewriter-effect';
+import { ReactTyped } from 'react-typed'
 
 const App = () => {
   let openMenu = () => {
@@ -41,21 +41,18 @@ const App = () => {
               <img src='hero.gif' />
             </div>
             <div>
-              <h1>Hey,<br /> I'm <Typewriter component={'span'}
-                onInit={(typewriter) => {
-                  typewriter.typeString("Jainam.")
-                    .pauseFor(800)
-                    .deleteAll()
-                    .typeString("Tech Enthusiast.")
-                    .pauseFor(800)
-                    .deleteAll()
-                    .typeString("From India.")
-                    .pauseFor(800)
-                    .deleteAll()
-                    .pauseFor(800)
-                    .typeString("Jainam.")
-                    .start();
-                }} /></h1>
+              <h1>
+                Hey,<br />I'm <ReactTyped
+                  strings={[
+                    "Jainam.",
+                    "Tech Enthusiast.",
+                    "From India."
+                  ]}
+                  typeSpeed={60}
+                  backSpeed={20}
+                  loop
+                /> 
+              </h1>
               <a href='#projects' className='btn'>Explore Projects<FontAwesomeIcon style={{ marginLeft: '8px' }} icon={faArrowRight} /></a>
             </div>
           </div>
@@ -64,10 +61,10 @@ const App = () => {
       <div className="side-menu">
         <div className="menu">
           <ul>
-            <li><a href='#home'>HOME</a></li>
-            <li><a href='#projects'>PROJECTS</a></li>
-            <li><a href='#about'>ABOUT</a></li>
-            <li><a href='#contact'>CONTACT</a></li>
+            <li><a href='#home'>Home</a></li>
+            <li><a href='#projects'>Projects</a></li>
+            <li><a href='#about'>About</a></li>
+            <li><a href='#contact'>Contact</a></li>
           </ul>
           <ul className='outer-links'>
             <li><a href='https://in.linkedin.com/in/jainam-doshi-24063a2a0'><FontAwesomeIcon icon={faLinkedin} /></a></li>
