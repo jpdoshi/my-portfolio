@@ -10,6 +10,11 @@
   src: url('LyonsType.ttf');
 }
 
+@font-face {
+  font-family: 'Inter';
+  src: url('Inter.ttf');
+}
+
 body {
   font-family: 'LyonsType';
   background-color: black;
@@ -21,7 +26,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.4px;
   -ms-overflow-style: none;
-  scrollbar-width: 0px;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -34,7 +39,6 @@ a {
 
 nav {
   width: 100%;
-  display: block;
   height: 100vh;
   position: fixed;
 }
@@ -44,9 +48,11 @@ nav a {
   margin-left: 12px;
   padding: 8px;
   color: #666666;
+  font-size: 18px;
 }
 
-nav a:hover {
+nav a:hover,
+nav .active {
   color: white;
 }
 
@@ -67,7 +73,15 @@ p {
 }
 
 .section-heading {
+  fill: none;
+  stroke: white;
+  stroke-width: 2px;
+  stroke-linejoin: round;
   font-size: 6rem;
+}
+
+.container {
+  display: flex;
 }
 
 .content {
@@ -76,5 +90,35 @@ p {
 }
 
 section {
-  margin: 15vh 0;
+  padding: 15vh 0;
+}
+
+.profile {
+  transform: translateX(50%);
+}
+
+@media (max-width: 1200px) {
+  .container {
+    display: block;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  nav {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    transform: translateX(50%);
+  }
+
+  .section-heading {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  nav a {
+    margin-left: 28px;
+  }
 }
