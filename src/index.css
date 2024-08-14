@@ -7,12 +7,12 @@
 
 @font-face {
   font-family: 'LyonsType';
-  src: url('LyonsType.ttf');
+  src: url('/LyonsType.ttf');
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url('Inter.ttf');
+  src: url('/Inter.ttf');
 }
 
 body {
@@ -20,7 +20,8 @@ body {
   background-color: black;
   color: white;
   max-width: 1200px;
-  width: 90%;
+  width: 100%;
+  padding-inline: 1.5rem;
   margin-inline: auto;
   text-transform: uppercase;
   font-weight: 600;
@@ -41,19 +42,28 @@ nav {
   width: 100%;
   height: 100vh;
   position: fixed;
+  z-index: 1000;
 }
 
 nav a {
   text-decoration: none;
   margin-left: 12px;
   padding: 8px;
-  color: #666666;
+  color: white;
+  opacity: 0.5;
   font-size: 18px;
 }
 
-nav a:hover,
-nav .active {
+nav a:hover {
   color: white;
+  opacity: 1;
+}
+
+nav .active {
+  /* color: red; */
+  color: white;
+  text-shadow: 0 0 8px red;
+  opacity: 1;
 }
 
 nav li {
@@ -65,19 +75,28 @@ nav .pfp {
   height: 180px;
   border-radius: 180px;
   display: block;
+  box-shadow: 0px 0px 180px red;
+}
+
+h2 {
+  padding: 4px 8px;
+  margin-bottom: 1rem;
+  opacity: 0.85;
+  border-bottom: 2px solid rgba(255, 0, 0, 0.5);
+  width: fit-content;
 }
 
 p {
-  opacity: 0.65;
-  line-height: 1.5;
+  text-transform: none;
+  font-weight: normal;
+  font-family: 'Inter';
+  opacity: 0.8;
+  line-height: 1.7;
 }
 
 .section-heading {
-  fill: none;
-  stroke: white;
-  stroke-width: 2px;
-  stroke-linejoin: round;
   font-size: 6rem;
+  margin-bottom: 1rem;
 }
 
 .container {
@@ -85,16 +104,13 @@ p {
 }
 
 .content {
-  margin-left: 240px;
+  margin-left: 260px;
   flex-grow: 1;
 }
 
 section {
+  scroll-snap-align: start;
   padding: 15vh 0;
-}
-
-.profile {
-  transform: translateX(50%);
 }
 
 @media (max-width: 1200px) {
@@ -103,22 +119,56 @@ section {
   }
 
   .content {
+    padding-top: 8vh;
     margin-left: 0;
   }
 
   nav {
-    position: relative;
-    height: fit-content;
-    width: fit-content;
-    transform: translateX(50%);
+    height: 72px;
+    position: fixed;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+  }
+
+  nav .spacer {
+    display: none;
+  }
+
+  nav .pfp {
+    height: 36px;
+    width: 36px;
+    box-shadow: none;
+  }
+
+  nav ul {
+    white-space: nowrap;
+    overflow-x: auto;
+    margin-left: 1rem;
+    padding-right: 2.5rem;
+  }
+
+  nav ul li {
+    display: inline-block;
+  }
+
+  nav ul li a {
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  nav ul li a:first-child {
+    padding-left: 0;
+  }
+
+  section {
+    padding: 8vh 0;
   }
 
   .section-heading {
-    font-size: 24px;
-    text-align: center;
-  }
-
-  nav a {
-    margin-left: 28px;
+    font-size: 2.5rem;
   }
 }
