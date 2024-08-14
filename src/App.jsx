@@ -11,10 +11,11 @@ const App = () => {
   window.addEventListener("scroll", () => {
     let scrollY = window.scrollY;
 
-    const sections = document.getElementsByTagName('section');
+    const content = document.getElementsByClassName('content')[0];
+    const sections = content.getElementsByTagName('section');
     const navLinks = document.getElementsByClassName('nav-link');
 
-    for (const current in sections) {
+    for (let current = 0; current < sections.length; current++) {
       const sectionHeight = sections[current].offsetHeight;
       const sectionTop = sections[current].offsetTop - 50;
 
