@@ -19,10 +19,6 @@ body {
   font-family: 'LyonsType';
   background-color: black;
   color: white;
-  max-width: 1200px;
-  width: 100%;
-  padding-inline: 1.5rem;
-  margin-inline: auto;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.4px;
@@ -40,6 +36,9 @@ body::-webkit-scrollbar {
 
 a {
   color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid white;
 }
 
 nav {
@@ -49,8 +48,9 @@ nav {
 }
 
 nav a {
-  text-decoration: none;
-  margin-left: 12px;
+  line-height: 32px;
+  border-bottom: none;
+  margin-inline: 12px;
   padding: 8px;
   color: white;
   opacity: 0.5;
@@ -62,8 +62,11 @@ nav a:hover {
   opacity: 1;
 }
 
+.icons a {
+  border-bottom: none;
+}
+
 nav .active {
-  /* color: red; */
   color: white;
   text-shadow: 0 0 8px red;
   opacity: 1;
@@ -78,12 +81,19 @@ nav .pfp {
   height: 180px;
   border-radius: 180px;
   display: block;
-  box-shadow: 0px 0px 180px red;
+  box-shadow: 0px 0px 64px rgba(255, 0, 0, 0.5);
+}
+
+code {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: red;
+  border-radius: 4px;
+  padding: 4px;
 }
 
 h2 {
-  padding: 4px 8px;
-  margin-bottom: 1rem;
+  padding-inline: 4px;
+  margin-bottom: 1.5rem;
   opacity: 0.85;
   border-bottom: 2px solid rgba(255, 0, 0, 0.5);
   width: fit-content;
@@ -99,11 +109,15 @@ p {
 
 .section-heading {
   font-size: 6rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .container {
   display: flex;
+  max-width: 1200px;
+  width: 100%;
+  padding-inline: 1.5rem;
+  margin-inline: auto;
 }
 
 .content {
@@ -129,6 +143,7 @@ section {
   padding: 12px 16px;
   cursor: pointer;
   transition: 0.35s ease;
+  border-radius: 2px;
 }
 
 .btn:before {
@@ -152,11 +167,34 @@ section {
 }
 
 #intro .icons img {
+  position: relative;
+  background-color: black;
   height: 64px;
-  margin: 6px;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
+  margin-right: 12px;
+  border: 2px solid #242424;
+  border-radius: 6px;
   padding: 10px;
+}
+
+#intro .icons img:hover {
+  box-shadow: 0 0 12px red;
+}
+
+.scroll-img {
+  height: 120px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transition: 0.5s all;
+}
+
+.bg-img {
+  width: 100vw;
+  z-index: -100;
+  position: fixed;
+  top: 0;
+  opacity: 0.12;
+  filter: blur(6px);
 }
 
 @media (max-width: 1200px) {
@@ -205,6 +243,7 @@ section {
     display: block;
     font-size: 16px;
     line-height: 16px;
+    margin-inline: 8px;
   }
 
   nav ul li a:first-child {
@@ -217,5 +256,9 @@ section {
 
   .section-heading {
     font-size: 2.5rem;
+  }
+
+  .bg-img {
+    height: 100vh;
   }
 }
