@@ -5,8 +5,8 @@ const NavMenu = () => {
     <nav>
       <div className='profile'>
         <div className='spacer' style={{ height: '15vh' }}></div>
-        <img src="https://avatars.githubusercontent.com/u/122164427?v=4" className='pfp' alt="Profile Image" />
-        <div className='spacer' style={{ height: '10vh' }}></div>
+        <img src="/assets/pfp.jpg" className='pfp' alt="Profile Image" />
+        <div className='spacer' style={{ height: '56px' }}></div>
       </div>
       <ul>
         <li><a href="#intro" className='nav-link active'>Intro</a></li>

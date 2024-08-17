@@ -5,7 +5,7 @@ const IntroSection = () => {
     <section id='intro'>
       <h1 className='section-heading'>Welcome</h1>
       <h2>Hey, I am Jainam Doshi!</h2>
-      <p>Hello there! I am Jainam P. Doshi, Tech Enthusiast from India 🇮🇳. I love to design cool apps with latest tech.</p>
+      <p>Hello there! I am Jainam P. Doshi, Tech Enthusiast from India 🇮🇳. 💻 I love to design cool apps with latest tech.</p>
       <br />
       <p>I am tech enthusiast and CS & IT student, who loves to make innovative projects 💡. I believe in self-learning and have fond of mobile development. I enjoy building APIs with NodeJS and mobile apps with Flutter and seamless API integration 🚀. Feel free to refer to my github projects and follow if you find my work helpful. 😉</p>
       <br />
@@ -15,8 +15,9 @@ const IntroSection = () => {
       <div className='icons'>
         <a href='https://unity.com/' target='_blank'><img src="/icons/unity.png" alt="unity" /></a>
         <a href='https://flutter.dev/' target='_blank'><img src="/icons/flutter.png" alt="flutter" /></a>
+        <a href='https://react.dev/' target='_blank'><img src="/icons/react.png" alt="react" /></a>
         <a href='https://nodejs.org/en' target='_blank'><img src="/icons/node.png" alt="node" /></a>
-        <a href='https://www.python.org/' target='_blank'><img src="/icons/python.png" alt="python" /></a>
+        <a href='https://www.djangoproject.com/' target='_blank'><img src="/icons/django.png" alt="django" /></a>
         <a href='https://www.mongodb.com/' target='_blank'><img src="/icons/mongodb.png" alt="mongodb" /></a>
         <a href='https://git-scm.com/' target='_blank'><img src="/icons/git.png" alt="git" /></a>
         <a href='https://en.wikipedia.org/wiki/Linux' target='_blank'><img src="/icons/linux.png" alt="linux" /></a>
