@@ -27,7 +27,7 @@ const App = () => {
         navLinks[current].className = "nav-link";
       }
 
-      if (scrollY > 50) {
+      if (scrollY > 64) {
         scrollImg.style.opacity = '0';
       }
     };
@@ -46,14 +46,6 @@ const App = () => {
         </div>
         <img src='/assets/scroll.gif' className='scroll-img' alt='scroll down' />
       </div>
-      <div style={{
-        zIndex: '-1000',
-        backgroundColor: 'rgba(0, 0, 0, 0.65)',
-        height: '100vh',
-        width: '100vw',
-        position: 'fixed',
-        top: '0', left: '0'
-      }}></div>
     </>
   )
 }

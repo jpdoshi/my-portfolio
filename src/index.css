@@ -6,8 +6,8 @@
 }
 
 @font-face {
-  font-family: 'LyonsType';
-  src: url('/fonts/LyonsType.ttf');
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins.ttf');
 }
 
 @font-face {
@@ -16,22 +16,15 @@
 }
 
 body {
-  font-family: 'LyonsType';
-  /* background-color: black; */
-  color: white;
+  font-family: 'Poppins';
   text-transform: uppercase;
   font-weight: 600;
-  letter-spacing: 0.4px;
   -ms-overflow-style: none;
   overflow-x: hidden;
-
-  background-image: url('/assets/background.jpg');
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 *::selection {
+  color: black;
   background-color: rgba(255, 0, 0, 0.35);
 }
 
@@ -40,10 +33,11 @@ body::-webkit-scrollbar {
 }
 
 a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 500;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid black;
+  letter-spacing: 0.4px;
 }
 
 nav {
@@ -53,17 +47,17 @@ nav {
 }
 
 nav a {
-  line-height: 32px;
+  line-height: 28px;
   border-bottom: none;
   padding: 8px;
-  color: white;
-  opacity: 0.5;
-  font-size: 18px;
+  opacity: 0.25;
+  font-size: 24px;
+  transition: 0.35s ease;
 }
 
 nav a:hover {
-  color: white;
-  opacity: 1;
+  opacity: 0.65;
+  font-size: 28px;
 }
 
 .icons a {
@@ -71,9 +65,8 @@ nav a:hover {
 }
 
 nav .active {
-  color: white;
-  text-shadow: 0 0 8px red;
   opacity: 1;
+  font-size: 28px;
 }
 
 nav li {
@@ -85,8 +78,12 @@ nav .pfp {
   height: 84px;
   border-radius: 84px;
   display: block;
-  padding: 4px;
-  box-shadow: 0px 0px 32px rgba(255, 0, 0, 0.35);
+  cursor: pointer;
+  transition: 0.35s ease;
+}
+
+nav .pfp:hover {
+  transform: scale(1.2);
 }
 
 code {
@@ -99,7 +96,7 @@ code {
 h2 {
   padding-inline: 4px;
   margin-bottom: 1.5rem;
-  opacity: 0.8;
+  opacity: 0.85;
   border-bottom: 2px solid rgba(255, 0, 0, 0.5);
   width: fit-content;
 }
@@ -110,10 +107,11 @@ p {
   font-family: 'Inter';
   opacity: 0.75;
   line-height: 1.7;
+  letter-spacing: 0.4;
 }
 
 .section-heading {
-  font-size: 6rem;
+  font-size: 5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -132,7 +130,7 @@ p {
 
 section {
   scroll-snap-align: start;
-  padding: 15vh 0;
+  padding: 64px 0;
 }
 
 .btn {
@@ -141,9 +139,8 @@ section {
   text-decoration: none;
   display: block;
   background: none;
-  color: white;
-  border: 1px solid white;
-  font-family: 'LyonsType';
+  border: 1px solid black;
+  font-family: 'Poppins';
   text-transform: uppercase;
   padding: 12px 16px;
   cursor: pointer;
@@ -159,7 +156,7 @@ section {
   bottom: 0;
   left: 0;
   right: 100%;
-  background-color: white;
+  background-color: black;
   transition: 0.35s ease;
 }
 
@@ -168,29 +165,31 @@ section {
 }
 
 .btn:hover {
-  color: black;
+  color: white;
 }
 
 #intro .icons img {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #212121;
   height: 64px;
-  margin-right: 12px;
+  margin-right: 10px;
   margin-bottom: 6px;
-  border: 2px solid #242424;
-  border-radius: 8px;
-  padding: 10px;
+  border-radius: 12px;
+  padding: 12px;
+  transition: 0.35s ease;
 }
 
 #intro .icons img:hover {
-  box-shadow: 0 0 12px red;
+  transform: scale(1.12);
+  padding: 8px;
+  border-radius: 16px;
 }
 
 .scroll-img {
-  height: 120px;
+  height: 64px;
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 1.5rem;
+  right: 1.5rem;
   transition: 0.5s all;
 }
 
@@ -210,8 +209,8 @@ section {
     padding-left: 1.5rem;
     position: fixed;
     display: flex;
-    background: linear-gradient(black, transparent);
-    backdrop-filter: blur(8px);
+    background: linear-gradient(white, rgba(255, 255, 255, 0.65));
+    backdrop-filter: blur(1rem);
     justify-content: center;
     align-items: center;
     overflow-x: auto;
@@ -226,8 +225,6 @@ section {
   nav .pfp {
     height: 36px;
     width: 36px;
-    padding: 0;
-    box-shadow: 0 0 24px rgba(255, 0, 0, 0.5);
   }
 
   nav ul {
