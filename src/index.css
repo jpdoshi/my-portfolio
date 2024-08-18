@@ -17,13 +17,18 @@
 
 body {
   font-family: 'LyonsType';
-  background-color: black;
+  /* background-color: black; */
   color: white;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.4px;
   -ms-overflow-style: none;
   overflow-x: hidden;
+
+  background-image: url('/assets/background.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 *::selection {
@@ -189,17 +194,6 @@ section {
   transition: 0.5s all;
 }
 
-.bg-img {
-  height: 100vh;
-  min-width: 100vw;
-  z-index: -100;
-  position: fixed;
-  top: 0;
-  opacity: 0.35;
-  filter: blur(8px);
-  overflow: hidden;
-}
-
 @media (max-width: 1200px) {
   .container {
     display: block;
@@ -212,13 +206,17 @@ section {
 
   nav {
     height: 72px;
+    line-height: 72px;
+    padding-left: 1.5rem;
     position: fixed;
     display: flex;
-    background-color: black;
+    background: linear-gradient(black, transparent);
+    backdrop-filter: blur(8px);
     justify-content: center;
     align-items: center;
     overflow-x: auto;
     z-index: 1000;
+    transform: translateX(-1.5rem);
   }
 
   nav .spacer {
@@ -229,14 +227,13 @@ section {
     height: 36px;
     width: 36px;
     padding: 0;
-    box-shadow: none;
+    box-shadow: 0 0 24px rgba(255, 0, 0, 0.5);
   }
 
   nav ul {
     white-space: nowrap;
     overflow-x: auto;
     margin-left: 1rem;
-    padding-right: 2.5rem;
   }
 
   nav ul li {

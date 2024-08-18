@@ -18,7 +18,7 @@ const App = () => {
 
     for (let current = 0; current < sections.length; current++) {
       const sectionHeight = sections[current].offsetHeight;
-      const sectionTop = sections[current].offsetTop - 50;
+      const sectionTop = sections[current].offsetTop - 64;
 
       if (scrollY > sectionTop &&
         scrollY <= sectionTop + sectionHeight) {
@@ -46,7 +46,14 @@ const App = () => {
         </div>
         <img src='/assets/scroll.gif' className='scroll-img' alt='scroll down' />
       </div>
-      <img src='/assets/background.jpg' className='bg-img' />
+      <div style={{
+        zIndex: '-1000',
+        backgroundColor: 'rgba(0, 0, 0, 0.65)',
+        height: '100vh',
+        width: '100vw',
+        position: 'fixed',
+        top: '0', left: '0'
+      }}></div>
     </>
   )
 }
