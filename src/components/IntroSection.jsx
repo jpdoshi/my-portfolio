@@ -23,7 +23,9 @@ const IntroSection = () => {
         <a href='https://en.wikipedia.org/wiki/Linux' target='_blank'><img src="/icons/linux.png" alt="linux" /></a>
       </div>
       <br />
-      <p>Above mentioned is the <code>tech stack</code> I love most to work with, for personal and/or work-related projects.</p>
+      <p>Above mentioned is the <code>tech stack</code> I love most to work with, for personal and/or work-related projects. I first started my learning journey with Unity. I primarily work with the MERN stack for web projects, Django is my favorite framework for full-stack web development.</p>
+      <br />
+      <p>While having interest in exploring various linux-based distros, I have experience of using it as my primary desktop operating system. There's much more to know about my tech journey, scroll down to explore!</p>
       <br /><br />
       <a href='mailto:jpdoshi2811@gmail.com' target='_blank' className='btn'>Get in touch</a>
     </section>

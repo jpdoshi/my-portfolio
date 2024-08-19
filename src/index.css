@@ -47,11 +47,11 @@ nav {
   position: fixed;
   display: flex;
   top: 50%;
-  left: -33%;
-  transform: translateY(-50%) rotate(90deg);
+  left: calc(50% - 480px);
+  transform: translateX(-50%) translateY(-50%) rotate(90deg);
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 nav li {
@@ -68,7 +68,7 @@ nav a {
 }
 
 nav a:hover {
-  opacity: 0.4;
+  opacity: 0.65;
   color: black;
 }
 
@@ -132,7 +132,6 @@ p {
   max-width: 1200px;
   width: 100%;
   padding-inline: 1.5rem;
-  padding-top: 25vh;
   margin-inline: auto;
 }
 
@@ -205,39 +204,7 @@ section:first-child {
   border-radius: 16px;
 }
 
-.scroll-panel {
-  background-color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  transition: 0.5s ease;
-  z-index: 100;
-}
-
-.scroll-div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.scroll-div p {
-  font-size: 16px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.scroll-img {
-  height: 120px;
-}
-
 @media (max-width: 1200px) {
-  .container {
-    display: block;
-  }
-
   .content {
     padding-top: 8vh;
     margin-left: 0;
@@ -251,11 +218,8 @@ section:first-child {
     padding-left: 1.5rem;
     background: linear-gradient(white, rgba(255, 255, 255, 0.65));
     backdrop-filter: blur(1rem);
-    justify-content: center;
-    align-items: center;
     overflow-x: auto;
     z-index: 10;
-    overflow-x: hidden;
     transform: translateX(0);
     width: 100vw;
   }
@@ -285,11 +249,6 @@ section:first-child {
     font-size: 16px;
     line-height: 16px;
     margin-inline: 8px;
-  }
-
-  nav ul li a:hover,
-  nav .active {
-    font-size: 16px;
   }
 
   nav ul li a:first-child {
