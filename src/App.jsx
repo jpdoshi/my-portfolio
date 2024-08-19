@@ -24,7 +24,7 @@ const App = () => {
         scrollY <= sectionTop + sectionHeight) {
         navLinks[current].className = "nav-link active";
 
-        sections[current].style.transform = 'translateX(0)';
+        sections[current].style.transform = 'translate(0, 0)';
         sections[current].style.opacity = '1';
       } else {
         navLinks[current].className = "nav-link";
