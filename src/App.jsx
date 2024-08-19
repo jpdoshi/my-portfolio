@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import NavMenu from './components/NavMenu'
 import IntroSection from './components/IntroSection'
 import AboutSection from './components/AboutSection'
 import ProjectsSection from './components/ProjectsSection'
-import ResumeSection from './components/ResumeSection'
+import ResumeSection from './components/PortfolioSection'
 import LinksSection from './components/LinksSection'
 
 const App = () => {
@@ -18,17 +18,20 @@ const App = () => {
 
     for (let current = 0; current < sections.length; current++) {
       const sectionHeight = sections[current].offsetHeight;
-      const sectionTop = sections[current].offsetTop - 64;
+      const sectionTop = sections[current].offsetTop - (screen.height / 4);
 
       if (scrollY > sectionTop &&
         scrollY <= sectionTop + sectionHeight) {
         navLinks[current].className = "nav-link active";
+
+        sections[current].style.transform = 'translateX(0)';
+        sections[current].style.opacity = '1';
       } else {
         navLinks[current].className = "nav-link";
       }
 
-      if (scrollY > 64) {
-        scrollImg.style.opacity = '0';
+      if (scrollY > 0) {
+        document.getElementsByClassName('scroll-panel')[0].style.transform = 'translateY(-100vh)';
       }
     };
   });
@@ -38,13 +41,18 @@ const App = () => {
       <div className='container'>
         <NavMenu />
         <div className='content'>
+          <div className='scroll-panel'>
+            <div className="scroll-div">
+              <img src='/assets/scroll.gif' className='scroll-img' alt='scroll down' />
+              <p>Scroll Down</p>
+            </div>
+          </div>
           <IntroSection />
           <AboutSection />
           <ProjectsSection />
           <ResumeSection />
           <LinksSection />
         </div>
-        <img src='/assets/scroll.gif' className='scroll-img' alt='scroll down' />
       </div>
     </>
   )

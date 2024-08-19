@@ -24,7 +24,7 @@ const IntroSection = () => {
       </div>
       <br />
       <p>Above mentioned is the <code>tech stack</code> I love most to work with, for personal and/or work-related projects.</p>
-      <br /><br /><br />
+      <br /><br />
       <a href='mailto:jpdoshi2811@gmail.com' target='_blank' className='btn'>Get in touch</a>
     </section>
   )
