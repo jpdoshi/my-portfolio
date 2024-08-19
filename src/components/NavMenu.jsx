@@ -4,10 +4,9 @@ const NavMenu = () => {
   return (
     <nav>
       <div className='profile'>
-        <div className='spacer' style={{ height: '84px' }}></div>
         <img src="/assets/pfp.png" className='pfp' alt="Profile Image" onClick={() => { window.open('https://github.com/jpdoshi', '_blank'); }} />
-        <div className='spacer' style={{ height: '54px' }}></div>
       </div>
+      <div className='spacer' style={{ width: '24px' }}></div>
       <ul>
         <li><a href="#intro" className='nav-link active'>Intro</a></li>
         <li><a href="#about" className='nav-link'>About</a></li>
