@@ -19,14 +19,13 @@ body {
   font-family: 'Poppins';
   text-transform: uppercase;
   font-weight: 600;
-
-  background-color: #FAFAFA;
+  background-color: white;
   overflow-x: hidden;
 }
 
 *::selection {
   color: black;
-  background-color: rgba(255, 0, 0, 0.35);
+  background-color: rgba(255, 0, 0, 0.25);
 }
 
 body::-webkit-scrollbar {
@@ -63,7 +62,7 @@ nav a {
   border-bottom: none;
   padding: 8px;
   opacity: 0.25;
-  font-size: 18px;
+  font-size: 16px;
   transition: 0.35s ease;
 }
 
@@ -263,15 +262,8 @@ td {
     margin-left: 1rem;
   }
 
-  nav ul li {
-    display: inline-block;
-  }
-
   nav ul li a {
-    display: block;
-    font-size: 16px;
-    line-height: 16px;
-    margin-inline: 8px;
+    margin-inline: 6px;
   }
 
   nav ul li a:first-child {
