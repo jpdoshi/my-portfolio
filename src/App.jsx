@@ -15,6 +15,13 @@ const App = () => {
     const sections = content.getElementsByTagName('section');
     const navLinks = document.getElementsByClassName('nav-link');
 
+    const scrollPercentBar = document.getElementById('scroll-percent-bar');
+    let docHeight = document.body.offsetHeight;
+    let winHeight = window.innerHeight;
+    let scrollPercent = scrollY / (docHeight - winHeight);
+    let scrollPercentRound = Math.round(scrollPercent * 100);
+    scrollPercentBar.style.width = `${scrollPercentRound}vw`;
+
     for (let current = 0; current < sections.length; current++) {
       const sectionHeight = sections[current].offsetHeight;
       const sectionTop = sections[current].offsetTop - (screen.height / 4);
@@ -33,6 +40,8 @@ const App = () => {
 
   return (
     <>
+      <div className='scroll-track' />
+      <div id="scroll-percent-bar" />
       <div className='container'>
         <NavMenu />
         <div className='content'>
@@ -41,6 +50,13 @@ const App = () => {
           <ProjectsSection />
           <ResumeSection />
           <LinksSection />
+          <div style={{
+            position: 'fixed',
+            bottom: '0px',
+            height: '10vh',
+            width: '100%',
+            background: 'linear-gradient(to bottom, transparent, white)'
+          }} />
         </div>
       </div>
     </>
