@@ -4,7 +4,8 @@ import NavMenu from './components/NavMenu'
 import IntroSection from './components/IntroSection'
 import AboutSection from './components/AboutSection'
 import ProjectsSection from './components/ProjectsSection'
-import ResumeSection from './components/PortfolioSection'
+import PortfolioSection from './components/PortfolioSection'
+import BlogSection from './components/BlogSection'
 import LinksSection from './components/LinksSection'
 
 const App = () => {
@@ -48,12 +49,13 @@ const App = () => {
           <IntroSection />
           <AboutSection />
           <ProjectsSection />
-          <ResumeSection />
+          <PortfolioSection />
+          <BlogSection />
           <LinksSection />
           <div style={{
             position: 'fixed',
             bottom: '0px',
-            height: '10vh',
+            height: '5vh',
             width: '100%',
             background: 'linear-gradient(to bottom, transparent, white)'
           }} />
