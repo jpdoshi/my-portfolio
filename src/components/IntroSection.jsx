@@ -13,15 +13,15 @@ const IntroSection = () => {
       <br /><br />
       <h2>Favorite Tech</h2>
       <div className='icons'>
-        <a href='https://unity.com/' target='_blank'><img src="/icons/unity.png" alt="unity" /></a>
-        <a href='https://flutter.dev/' target='_blank'><img src="/icons/flutter.png" alt="flutter" /></a>
-        <a href='https://react.dev/' target='_blank'><img src="/icons/react.png" alt="react" /></a>
-        <a href='https://nodejs.org/en' target='_blank'><img src="/icons/node.png" alt="node" /></a>
-        <a href='https://www.djangoproject.com/' target='_blank'><img src="/icons/django.png" alt="django" /></a>
-        <a href='https://www.mongodb.com/' target='_blank'><img src="/icons/mongodb.png" alt="mongodb" /></a>
-        <a href='https://git-scm.com/' target='_blank'><img src="/icons/git.png" alt="git" /></a>
-        <a href='https://neovim.io' target='_blank'><img src="/icons/neovim.png" alt="neovim" /></a>
-        <a href='https://en.wikipedia.org/wiki/Linux' target='_blank'><img src="/icons/linux.png" alt="linux" /></a>
+        <a href='https://unity.com/' target='_blank'><i className="devicon-unity-plain"></i></a>
+        <a href='https://flutter.dev/' target='_blank'><i className="devicon-flutter-plain"></i></a>
+        <a href='https://react.dev/' target='_blank'><i className="devicon-react-original"></i></a>
+        <a href='https://nodejs.org/en' target='_blank'><i className="devicon-nodejs-plain"></i></a>
+        <a href='https://www.djangoproject.com/' target='_blank'><i className="devicon-django-plain"></i></a>
+        <a href='https://www.mongodb.com/' target='_blank'><i className="devicon-mongodb-plain"></i></a>
+        <a href='https://git-scm.com/' target='_blank'><i className="devicon-git-plain"></i></a>
+        <a href='https://neovim.io' target='_blank'><i className="devicon-neovim-plain"></i></a>
+        <a href='https://en.wikipedia.org/wiki/Linux' target='_blank'><i className="devicon-linux-plain"></i></a>
       </div>
       <br />
       <p>Above mentioned is the <code>tech stack</code> I love most to work with, for personal and/or work-related projects. I started my learning journey with Game development using Unity and C#. I primarily work with MERN stack for web projects, Though django is my favorite framework for full-stack web development.</p>

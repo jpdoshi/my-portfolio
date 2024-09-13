@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import NavMenu from './components/NavMenu'
 import IntroSection from './components/IntroSection'
@@ -52,13 +52,6 @@ const App = () => {
           <PortfolioSection />
           <BlogSection />
           <LinksSection />
-          <div style={{
-            position: 'fixed',
-            bottom: '0px',
-            height: '5vh',
-            width: '100%',
-            background: 'linear-gradient(to bottom, transparent, white)'
-          }} />
         </div>
       </div>
     </>
