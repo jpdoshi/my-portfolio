@@ -1,9 +1,18 @@
 import React from 'react'
+import TypeWriter from 'typewriter-effect'
 
 const IntroSection = () => {
   return (
     <section id='intro'>
-      <h1 className='section-heading'>Welcome</h1>
+      <TypeWriter options={{
+        strings: 'Welcome',
+        autoStart: true,
+        loop: true,
+        cursor: '_',
+        wrapperClassName: 'section-heading',
+        cursorClassName: 'section-heading'
+      }}/>
+      <br />
       <h2>Hey, I am Jainam Doshi!</h2>
       <p>Hello there! I am Jainam P. Doshi, Software Developer from India 🇮🇳. I love to design cool apps with latest tech.</p>
       <br />

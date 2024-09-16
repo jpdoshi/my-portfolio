@@ -122,7 +122,6 @@ p {
 
 .section-heading {
   font-size: 5rem;
-  margin-bottom: 1.5rem;
 }
 
 .container {
@@ -139,7 +138,7 @@ p {
 }
 
 section {
-  padding: 52px 0;
+  padding: 50px 0;
   opacity: 0;
   transition: 0.5s ease;
   transform: translateX(10vw);
@@ -293,7 +292,6 @@ td {
   }
 
   section {
-    padding: 72px 0;
     transform: translate(0, 10vh);
   }
 

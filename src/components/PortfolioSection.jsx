@@ -1,9 +1,18 @@
 import React from 'react'
+import TypeWriter from 'typewriter-effect'
 
 const PortfolioSection = () => {
   return (
     <section id='portfolio'>
-      <h1 className='section-heading'>My Portfolio</h1>
+      <TypeWriter options={{
+        strings: 'My Portfolio',
+        autoStart: true,
+        loop: true,
+        cursor: '_',
+        wrapperClassName: 'section-heading',
+        cursorClassName: 'section-heading'
+      }}/>
+      <br/>
     </section>
   )
 }

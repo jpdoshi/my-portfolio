@@ -1,9 +1,18 @@
 import React from 'react'
+import TypeWriter from 'typewriter-effect'
 
 const AboutSection = () => {
   return (
     <section id='about'>
-      <h1 className='section-heading'>About Me</h1>
+      <TypeWriter options={{
+        strings: 'About Me',
+        autoStart: true,
+        loop: true,
+        cursor: '_',
+        wrapperClassName: 'section-heading',
+        cursorClassName: 'section-heading'
+      }}/>
+      <br />
       <h2>Educational Details</h2>
       <div className="table-wrapper">
         <table>

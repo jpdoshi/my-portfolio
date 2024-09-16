@@ -25,7 +25,7 @@ const App = () => {
 
     for (let current = 0; current < sections.length; current++) {
       const sectionHeight = sections[current].offsetHeight;
-      const sectionTop = sections[current].offsetTop - (screen.height / 4);
+      const sectionTop = sections[current].offsetTop - (screen.height / 2);
 
       if (scrollY > sectionTop &&
         scrollY <= sectionTop + sectionHeight) {
