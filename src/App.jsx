@@ -7,6 +7,7 @@ import ProjectsSection from './components/ProjectsSection'
 import PortfolioSection from './components/PortfolioSection'
 import BlogSection from './components/BlogSection'
 import LinksSection from './components/LinksSection'
+import FooterSection from './components/FooterSection'
 
 const App = () => {
   window.addEventListener("scroll", () => {
@@ -20,8 +21,13 @@ const App = () => {
     let docHeight = document.body.offsetHeight;
     let winHeight = window.innerHeight;
     let scrollPercent = scrollY / (docHeight - winHeight);
+
+    let scrollContainer = document.getElementsByClassName('scroll-container')[0];
     let scrollPercentRound = Math.round(scrollPercent * 100);
-    scrollPercentBar.style.width = `${scrollPercentRound}vw`;
+
+    if (scrollPercentRound > 0 && scrollPercentRound < 100 ) { scrollContainer.style.opacity = '1'; }
+    else { scrollContainer.style.opacity = '0'; }
+    scrollPercentBar.style.width = `${scrollPercentRound}%`;
 
     for (let current = 0; current < sections.length; current++) {
       const sectionHeight = sections[current].offsetHeight;
@@ -41,8 +47,9 @@ const App = () => {
 
   return (
     <>
-      <div className='scroll-track' />
-      <div id="scroll-percent-bar" />
+      <div className="scroll-container">
+        <div id="scroll-percent-bar" />
+      </div>
       <div className='container'>
         <NavMenu />
         <div className='content'>
@@ -52,6 +59,7 @@ const App = () => {
           <PortfolioSection />
           <BlogSection />
           <LinksSection />
+          <FooterSection />
         </div>
       </div>
     </>
