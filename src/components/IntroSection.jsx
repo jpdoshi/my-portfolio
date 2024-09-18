@@ -1,6 +1,18 @@
 import React from 'react'
 import TypeWriter from 'typewriter-effect'
 
+import {
+  UnityOriginalIcon,
+  FlutterOriginalIcon,
+  ReactOriginalIcon,
+  NodejsOriginalIcon,
+  DjangoPlainIcon,
+  MongodbOriginalIcon,
+  GitOriginalIcon,
+  NeovimOriginalIcon,
+  LinuxOriginalIcon
+} from 'react-devicons'
+
 const IntroSection = () => {
   return (
     <section id='intro'>
@@ -22,15 +34,15 @@ const IntroSection = () => {
       <br /><br />
       <h2>Favorite Tech</h2>
       <div className='icons'>
-        <a href='https://unity.com/' target='_blank'><i className="devicon-unity-plain"></i></a>
-        <a href='https://flutter.dev/' target='_blank'><i className="devicon-flutter-plain"></i></a>
-        <a href='https://react.dev/' target='_blank'><i className="devicon-react-original"></i></a>
-        <a href='https://nodejs.org/en' target='_blank'><i className="devicon-nodejs-plain"></i></a>
-        <a href='https://www.djangoproject.com/' target='_blank'><i className="devicon-django-plain"></i></a>
-        <a href='https://www.mongodb.com/' target='_blank'><i className="devicon-mongodb-plain"></i></a>
-        <a href='https://git-scm.com/' target='_blank'><i className="devicon-git-plain"></i></a>
-        <a href='https://neovim.io' target='_blank'><i className="devicon-neovim-plain"></i></a>
-        <a href='https://en.wikipedia.org/wiki/Linux' target='_blank'><i className="devicon-linux-plain"></i></a>
+        <a href='https://unity.com/' target='_blank'><UnityOriginalIcon className='icon' /></a>
+        <a href='https://flutter.dev/' target='_blank'><FlutterOriginalIcon className='icon' /></a>
+        <a href='https://react.dev/' target='_blank'><ReactOriginalIcon className='icon' /></a>
+        <a href='https://nodejs.org/en' target='_blank'><NodejsOriginalIcon className='icon' /></a>
+        <a href='https://www.djangoproject.com/' target='_blank'><DjangoPlainIcon className='icon' /></a>
+        <a href='https://www.mongodb.com/' target='_blank'><MongodbOriginalIcon className='icon' /></a>
+        <a href='https://git-scm.com/' target='_blank'><GitOriginalIcon className='icon' /></a>
+        <a href='https://neovim.io' target='_blank'><NeovimOriginalIcon className='icon' /></a>
+        <a href='https://en.wikipedia.org/wiki/Linux' target='_blank'><LinuxOriginalIcon className='icon' /></a>
       </div>
       <br />
       <p>Above mentioned is the <code>tech stack</code> I love most to work with, for personal and/or work-related projects. I started my learning journey with Game development using Unity and C#. I primarily work with MERN stack for web projects, Though django is my favorite framework for full-stack web development.</p>

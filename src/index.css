@@ -217,14 +217,17 @@ td {
   right: 0;
 }
 
-#intro .icons i {
-  font-size: 48px;
-  height: 64px;
+#intro .icons .icon {
+  font-size: 64px;
+  transition: 0.35s ease;
+  background-color: #2E3440;
+  border-radius: 8px;
+  padding: 12px;
   transition: 0.35s ease;
 }
 
-#intro .icons i:hover {
-  color: var(--cyan);
+#intro .icons .icon:hover {
+  padding: 6px;
 }
 
 #intro .icons {
@@ -234,16 +237,16 @@ td {
 
 .icons a {
   border-bottom: none;
-  margin: 16px;
+  margin: 8px;
 }
 
 .scroll-container {
   transform: rotate(90deg);
   position: fixed;
   top: 50%;
-  right: calc(50% - 720px);
+  right: calc(50% - 700px);
   height: 6px;
-  width: 160px;
+  width: 120px;
   z-index: 1000;
   background-color: #3B4252;
   border-radius: 12px;
@@ -322,6 +325,6 @@ td {
   }
 
   .scroll-container {
-    right: calc(-16px - 54px);
+    right: calc(-16px - 28px);
   }
 }

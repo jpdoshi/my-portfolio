@@ -20,13 +20,16 @@ const App = () => {
     const scrollPercentBar = document.getElementById('scroll-percent-bar');
     let docHeight = document.body.offsetHeight;
     let winHeight = window.innerHeight;
+    
     let scrollPercent = scrollY / (docHeight - winHeight);
-
     let scrollContainer = document.getElementsByClassName('scroll-container')[0];
     let scrollPercentRound = Math.round(scrollPercent * 100);
 
-    if (scrollPercentRound > 0 && scrollPercentRound < 100 ) { scrollContainer.style.opacity = '1'; }
-    else { scrollContainer.style.opacity = '0'; }
+    if (scrollPercentRound > 0 && scrollPercentRound < 100 ) {
+      scrollContainer.style.opacity = '1';
+    } else {
+      scrollContainer.style.opacity = '0';
+    }
     scrollPercentBar.style.width = `${scrollPercentRound}%`;
 
     for (let current = 0; current < sections.length; current++) {
