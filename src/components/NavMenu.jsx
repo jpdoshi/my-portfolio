@@ -4,7 +4,7 @@ const NavMenu = () => {
   return (
     <nav>
       <div className='profile'>
-        <img src="/assets/pfp.png" className='pfp' alt="Profile Image" onClick={() => { window.open('https://github.com/jpdoshi', '_blank'); }} />
+        <img src="/assets/pfp.png" className='pfp' loading='lazy' alt="Profile Image" onClick={() => { window.open('https://github.com/jpdoshi', '_blank'); }} />
       </div>
       <div className='spacer' style={{ width: '24px' }}></div>
       <ul>

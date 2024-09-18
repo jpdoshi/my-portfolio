@@ -94,7 +94,7 @@ nav .pfp {
 }
 
 nav .pfp:hover {
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1) rotate(-90deg);
 }
 
 code {
@@ -221,13 +221,15 @@ td {
   font-size: 64px;
   transition: 0.35s ease;
   background-color: #2E3440;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 12px;
   transition: 0.35s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 #intro .icons .icon:hover {
-  padding: 6px;
+  padding: 8px;
+  transform: scale(1.15);
 }
 
 #intro .icons {

@@ -1,13 +1,13 @@
 import React from 'react'
 
 import NavMenu from './components/NavMenu'
-import IntroSection from './components/IntroSection'
-import AboutSection from './components/AboutSection'
-import ProjectsSection from './components/ProjectsSection'
-import PortfolioSection from './components/PortfolioSection'
-import BlogSection from './components/BlogSection'
-import LinksSection from './components/LinksSection'
-import FooterSection from './components/FooterSection'
+import IntroSection from './components/sections/IntroSection'
+import AboutSection from './components/sections/AboutSection'
+import ProjectsSection from './components/sections/ProjectsSection'
+import PortfolioSection from './components/sections/PortfolioSection'
+import BlogSection from './components/sections/BlogSection'
+import LinksSection from './components/sections/LinksSection'
+import FooterSection from './components/sections/FooterSection'
 
 const App = () => {
   window.addEventListener("scroll", () => {
@@ -20,12 +20,12 @@ const App = () => {
     const scrollPercentBar = document.getElementById('scroll-percent-bar');
     let docHeight = document.body.offsetHeight;
     let winHeight = window.innerHeight;
-    
+
     let scrollPercent = scrollY / (docHeight - winHeight);
     let scrollContainer = document.getElementsByClassName('scroll-container')[0];
     let scrollPercentRound = Math.round(scrollPercent * 100);
 
-    if (scrollPercentRound > 0 && scrollPercentRound < 100 ) {
+    if (scrollPercentRound > 0 && scrollPercentRound < 100) {
       scrollContainer.style.opacity = '1';
     } else {
       scrollContainer.style.opacity = '0';

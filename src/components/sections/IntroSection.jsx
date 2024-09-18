@@ -16,17 +16,17 @@ import {
 const IntroSection = () => {
   return (
     <section id='intro'>
-      <TypeWriter options={{
-        strings: 'Welcome',
+      <h1 className="section-heading">Welcome</h1>
+      <br />
+      <h2>Hey, I am <span style={{
+        display: 'inline-flex'
+      }}><TypeWriter options={{
+        strings: ['Jainam Doshi!', 'Software Developer!', 'from India!'],
         autoStart: true,
         loop: true,
-        cursor: '_',
-        wrapperClassName: 'section-heading',
-        cursorClassName: 'section-heading'
-      }}/>
-      <br />
-      <h2>Hey, I am Jainam Doshi!</h2>
-      <p>Hello there! I am Jainam P. Doshi, Software Developer from India 🇮🇳. I love to design cool apps with latest tech.</p>
+        cursor: '_'
+      }} /></span></h2>
+      <p>Hello there! I am Jainam P. Doshi, Software Developer from India. I love to design cool apps with latest tech.</p>
       <br />
       <p>I am a software developer who loves to make innovative projects. I believe in self-learning and have fond of video game and software development. I enjoy building web apps with React and Node with seamless API integration 🚀. Feel free to refer to my github projects and follow if you find my work helpful. 😉</p>
       <br />
