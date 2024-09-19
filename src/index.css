@@ -50,7 +50,7 @@ nav {
   position: fixed;
   display: flex;
   top: 50%;
-  left: calc(50% - 480px);
+  left: calc(50% - 540px);
   transform: translateX(-50%) translateY(-50%) rotate(90deg);
   justify-content: center;
   align-items: center;
@@ -176,7 +176,8 @@ p {
 }
 
 .content {
-  margin-left: 220px;
+  margin-left: 160px;
+  margin-right: 80px;
   flex-grow: 1;
 }
 
@@ -287,7 +288,7 @@ td {
   transform: rotate(90deg);
   position: fixed;
   top: 50%;
-  right: calc(50% - 700px);
+  right: calc(50% - 650px);
   height: 6px;
   width: 120px;
   z-index: 1000;
@@ -311,6 +312,7 @@ td {
   .content {
     padding-top: 72px;
     margin-left: 0;
+    margin-right: 0;
   }
 
   nav {
@@ -373,5 +375,9 @@ td {
   .grid .box {
     width: 100%;
     margin: 8px 0;
+  }
+
+  footer {
+    margin-bottom: 16px;
   }
 }
