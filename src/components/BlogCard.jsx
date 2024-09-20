@@ -6,9 +6,10 @@ const BlogCard = ({ img, gradient, title, url }) => {
       <a href={url} className='link' target='_blank'>
         <div className="blog-card">
           <div className="img-section" style={{ background: `linear-gradient(to bottom, ${gradient[0]}, ${gradient[1]})` }}>
-            <img height={120} width={120} src={`/images/${img}`} alt={(title).toLowerCase()} loading='lazy' />
+            <img height={120} width={120} src={`/images/${img}`} alt={`/images/${img}`} loading='lazy' />
           </div>
           <h3 className="title">{title}</h3>
+          <span className="card-arrow">↗</span>
         </div>
       </a>
     </div>

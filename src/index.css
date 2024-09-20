@@ -8,6 +8,9 @@
 @font-face {
   font-family: 'JetBrainsMono';
   src: url('/fonts/JetBrainsMono.ttf');
+
+  font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -131,6 +134,7 @@ p {
 }
 
 .blog-card {
+  position: relative;
   background-color: #2E3440;
   height: 100%;
 }
@@ -161,6 +165,27 @@ p {
 
 .grid .box .link:hover .title {
   text-decoration: underline;
+}
+
+.blog-card .card-arrow {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.35s ease;
+}
+
+.blog-card:hover .card-arrow {
+  transform: scale(1.5);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 16px;
 }
 
 .section-heading {

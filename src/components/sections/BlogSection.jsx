@@ -13,7 +13,7 @@ const BlogSection = () => {
           title="Steps to deploy Node API"
           url="https://jpdoshi.notion.site/Steps-to-deploy-Node-API-dbf634e53c234f469f0253ee7311844c?pvs=4" />
         <BlogCard
-          gradient={['#E0EAFC', '#CFDEF3']}
+          gradient={['#93EDC7', '#1CD8D2']}
           img='neovim.png'
           title="Setup Neovim for Coding in Windows"
           url="https://jpdoshi.notion.site/Setup-neovim-for-coding-in-windows-31153de340a64c14a240ee635dfd91fd?pvs=4" />
