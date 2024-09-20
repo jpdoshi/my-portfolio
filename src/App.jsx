@@ -10,6 +10,16 @@ import LinksSection from './components/sections/LinksSection'
 import FooterSection from './components/sections/FooterSection'
 
 const App = () => {
+  const [contentLoading, setContentLoading] = React.useState(true);
+
+  // handle contentLoading:
+  React.useEffect(() => {
+    setTimeout(() => {
+      setContentLoading(false);
+    }, 500);
+  }, []);
+
+  // handle onScroll event:
   window.addEventListener("scroll", () => {
     let scrollY = window.scrollY;
 
@@ -48,7 +58,17 @@ const App = () => {
     };
   });
 
-  return (
+  return contentLoading ? (
+    <>
+      <h1 style={{
+        position: 'absolute',
+        top: '50%', left: '50%',
+        transform: 'translate(-50%, -50%)'
+      }}>
+        Loading
+      </h1>
+    </>
+  ) : (
     <>
       <div className="scroll-container">
         <div id="scroll-percent-bar" />

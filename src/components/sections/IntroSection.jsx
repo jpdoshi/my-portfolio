@@ -34,15 +34,15 @@ const IntroSection = () => {
       <br /><br />
       <h2>Favorite Tech</h2>
       <div className='icons'>
-        <a href='https://unity.com/' target='_blank' name='devicon-btn'><UnityOriginalIcon className='icon' /></a>
-        <a href='https://flutter.dev/' target='_blank' name='devicon-btn'><FlutterOriginalIcon className='icon' /></a>
-        <a href='https://react.dev/' target='_blank' name='devicon-btn'><ReactOriginalIcon className='icon' /></a>
-        <a href='https://nodejs.org/en' target='_blank' name='devicon-btn'><NodejsOriginalIcon className='icon' /></a>
-        <a href='https://www.djangoproject.com/' target='_blank' name='devicon-btn'><DjangoPlainIcon className='icon' /></a>
-        <a href='https://www.mongodb.com/' target='_blank' name='devicon-btn'><MongodbOriginalIcon className='icon' /></a>
-        <a href='https://git-scm.com/' target='_blank' name='devicon-btn'><GitOriginalIcon className='icon' /></a>
-        <a href='https://neovim.io' target='_blank' name='devicon-btn'><NeovimOriginalIcon className='icon' /></a>
-        <a href='https://en.wikipedia.org/wiki/Linux' target='_blank' name='devicon-btn'><LinuxOriginalIcon className='icon' /></a>
+        <a href='https://unity.com/' target='_blank' name='unity-devicon'><UnityOriginalIcon className='icon' /></a>
+        <a href='https://flutter.dev/' target='_blank' name='flutter-devicon'><FlutterOriginalIcon className='icon' /></a>
+        <a href='https://react.dev/' target='_blank' name='react-devicon'><ReactOriginalIcon className='icon' /></a>
+        <a href='https://nodejs.org/en' target='_blank' name='node-devicon'><NodejsOriginalIcon className='icon' /></a>
+        <a href='https://www.djangoproject.com/' target='_blank' name='django-devicon'><DjangoPlainIcon className='icon' /></a>
+        <a href='https://www.mongodb.com/' target='_blank' name='mongo-devicon'><MongodbOriginalIcon className='icon' /></a>
+        <a href='https://git-scm.com/' target='_blank' name='git-devicon'><GitOriginalIcon className='icon' /></a>
+        <a href='https://neovim.io/' target='_blank' name='neovim-devicon'><NeovimOriginalIcon className='icon' /></a>
+        <a href='https://linux.org/' target='_blank' name='linux-devicon'><LinuxOriginalIcon className='icon' /></a>
       </div>
       <br />
       <p>Above mentioned is the <code>tech stack</code> I love most to work with, for personal and/or work-related projects. I started my learning journey with Game development using Unity and C#. I primarily work with MERN stack for web projects, Though django is my favorite framework for full-stack web development.</p>

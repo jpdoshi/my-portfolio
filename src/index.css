@@ -89,6 +89,7 @@ nav li {
 
 nav .pfp {
   height: 84px;
+  width: 84px;
   border-radius: 84px;
   display: block;
   cursor: pointer;
