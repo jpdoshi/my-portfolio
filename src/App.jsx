@@ -1,26 +1,29 @@
-import React from 'react'
+import React, { useEffect, Suspense, lazy } from 'react'
 
-import NavMenu from './components/NavMenu'
-import IntroSection from './components/sections/IntroSection'
-import AboutSection from './components/sections/AboutSection'
-import ProjectsSection from './components/sections/ProjectsSection'
-import PortfolioSection from './components/sections/PortfolioSection'
-import BlogSection from './components/sections/BlogSection'
-import LinksSection from './components/sections/LinksSection'
-import FooterSection from './components/sections/FooterSection'
+const NavMenu = lazy(() => import('./components/NavMenu'));
+const IntroSection = lazy(() => import('./components/sections/IntroSection'));
+const AboutSection = lazy(() => import('./components/sections/AboutSection'));
+const ProjectsSection = lazy(() => import('./components/sections/ProjectsSection'));
+const PortfolioSection = lazy(() => import('./components/sections/PortfolioSection'));
+const BlogSection = lazy(() => import('./components/sections/BlogSection'));
+const LinksSection = lazy(() => import('./components/sections/LinksSection'));
+const FooterSection = lazy(() => import('./components/sections/FooterSection'));
+
+const Loader = () => {
+  return (
+    <>
+      <img src='/assets/loading.gif' style={{
+        position: 'absolute',
+        top: '50%', left: '50%',
+        transform: 'translate(-50%, -50%)'
+      }} loading='lazy' alt='LOADING'
+        height={200} width={200} />
+    </>
+  )
+}
 
 const App = () => {
-  const [contentLoading, setContentLoading] = React.useState(true);
-
-  // handle contentLoading:
-  React.useEffect(() => {
-    setTimeout(() => {
-      setContentLoading(false);
-    }, 500);
-  }, []);
-
-  // handle onScroll event:
-  window.addEventListener("scroll", () => {
+  const handleScroll = () => {
     let scrollY = window.scrollY;
 
     const content = document.getElementsByClassName('content')[0];
@@ -56,20 +59,15 @@ const App = () => {
         navLinks[current].className = "nav-link";
       }
     };
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   });
 
-  return contentLoading ? (
-    <>
-      <h1 style={{
-        position: 'absolute',
-        top: '50%', left: '50%',
-        transform: 'translate(-50%, -50%)'
-      }}>
-        Loading
-      </h1>
-    </>
-  ) : (
-    <>
+  return (
+    <Suspense fallback={<Loader />}>
       <div className="scroll-container">
         <div id="scroll-percent-bar" />
       </div>
@@ -85,7 +83,7 @@ const App = () => {
           <FooterSection />
         </div>
       </div>
-    </>
+    </Suspense>
   )
 }
 
