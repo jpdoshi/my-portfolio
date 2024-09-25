@@ -334,6 +334,29 @@ td {
   border-radius: 12px;
 }
 
+.chatbot {
+  position: fixed;
+  right: 8px;
+  bottom: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  animation-name: chatbot-motion;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes chatbot-motion {
+  from {
+    transform: translateY(0) scale(1);
+  }
+
+  to {
+    transform: translateY(-16px) scale(1.05);
+  }
+}
+
 @media (max-width: 1200px) {
   .content {
     padding-top: 72px;
