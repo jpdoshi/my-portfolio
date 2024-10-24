@@ -1,5 +1,7 @@
 import React, { useEffect, Suspense, lazy } from "react";
 
+import Chatbot from "./components/Chatbot";
+
 const NavMenu = lazy(() => import("./components/NavMenu"));
 const IntroSection = lazy(() => import("./components/sections/IntroSection"));
 const AboutSection = lazy(() => import("./components/sections/AboutSection"));
@@ -12,7 +14,6 @@ const PortfolioSection = lazy(() =>
 const BlogSection = lazy(() => import("./components/sections/BlogSection"));
 const LinksSection = lazy(() => import("./components/sections/LinksSection"));
 const FooterSection = lazy(() => import("./components/sections/FooterSection"));
-const Chatbot = lazy(() => import("./components/Chatbot"));
 
 const Loader = () => {
   return (
